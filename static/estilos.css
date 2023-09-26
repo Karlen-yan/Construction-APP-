@@ -37,6 +37,136 @@
   font-size: 40px;
 }
 
+.testimonial__contine-title{
+  background-image: linear-gradient(to bottom, rgba(14, 17, 33, 0.214), rgba(40, 42, 47, 0));
+  border-top: 2px solid  #263238;
+  margin-top: 15px;
+}
+.testimonial__h2{
+  color:#263238;
+  text-align: center;
+  padding-top: 30px;
+  font-size: 2.50rem;
+}
+.testimonial__p{
+  margin-bottom: 250px;
+  text-align: center;
+}
+.testimonials {
+  margin: 50px 0 50px 0;
+  padding: 20px;
+  background-color: #263238;
+  
+}
+
+.testimonial {
+  margin-bottom: 20px;
+  margin-top: 20px;
+  background-color: white;
+  padding: 20px;
+  margin-top: -130px;
+  border: #263238 solid 3px;
+  border-radius: 20px ;
+}
+.testimonial__container-img{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -80px;
+  
+  
+}
+.testimonial img {
+  width: 150px;
+  border: #263238 solid 2px;
+  border-radius: 100%;
+
+}
+
+.testimonial h3 {
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+.testimonial p {
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .testimonials {
+    margin-top: 0;
+  }
+  .testimonial__contine-title {
+    border-top: none;
+  }
+  .testimonial__h2 {
+    font-size: 2rem;
+  }
+  .testimonial__p {
+    margin-bottom: 150px;
+  }
+  .testimonial {
+    margin-bottom: 10px;
+    margin-top: 10px;
+    background-color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+  }
+  .testimonial__container-img {
+    margin-top: 0;
+  }
+  .testimonial img {
+    width: 120px;
+  }
+  .testimonial h3 {
+    font-size: 16px;
+  }
+  .testimonial p {
+    font-size: 14px;
+  }
+}
+/* equipament */
+.equipment__container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 85px 55px 55px 55px;
+
+   
+}
+.equipment__container-img{
+  width: 25%;
+}
+.equipment__container-img img{
+  width: 300px;
+  background-color: #263238;
+  border-radius: 15px;
+}
+.equipment__container-text{
+  width: 50%;
+}
+
+@media (max-width: 768px) {
+  .equipment__container {
+    flex-direction: column-reverse;
+    margin-top: 0;
+  }
+  .equipment__container-img {
+    width: 100%;
+  }
+  .equipment__container-img img {
+    width: 100%;
+  }
+  .equipment__container-text {
+    margin-top: 20px;
+  }
+}
+
 header::before {
   content: "";
   background-image: linear-gradient(
@@ -202,7 +332,6 @@ header::before {
   border-block-start-style:ridge;
   border-block-end-style:ridge;
   border-radius: 5px;
-
 }
 .content__page-budget-description-fond h1{
   color: white;
@@ -342,120 +471,89 @@ th {
 }
 
 /* Estilos de la pagina foto  */
-.h1_galeriia {
-  text-shadow: 3px 4px 8px black;
-  background-color: #234e5a;
-  color: #fff;
-  text-align: center;
+.container__h1-galeria{
+  background-color: #263238ea;
+  margin: 2% auto;
+  width: 50%;
+  border-block-start-style: ridge;
+  border-block-end-style: ridge;
+  border-radius: 15px;
+}
+.h1__galeriia {
+  color: #fff9ff;
   padding: 15px;
   margin: 20px;
+  text-shadow: 4px 2px 8px black;
+  text-align: center;
 }
+
+.gallery {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-auto-rows: 250px;
+  grid-auto-flow: dense;
+  grid-gap: 20px;
+}
+
+.gallery .gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.gallery .gallery-item:hover img {
+  transform: scale(1.1);
+}
+
+.gallery .gallery-item a {
+  cursor: zoom-in;
+}
+.gallery .gallery-item:nth-child(3n - 2) {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+/* Let's make it responsive */
+@media (max-width: 768px) {
+  gallery {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-auto-rows: 250px;
+  }
+  .gallery .gallery-item:nth-child(3n - 2) {
+    grid-column: unset;
+    grid-row: unset;
+  }
+  
+}
+
 
 /* Página de videos  */
 
-.estilo_cont_videos {
-  background-color: #887c90;
-}
 .video_estilos {
   box-shadow: 4px 3px 14px white;
   padding: 15px;
   margin: 20px;
 }
-.estilo_cont_videos h1 {
-  color: #fff9ff;
-  text-shadow: 4px 3px 7px #53485a;
+.container__video-h1 h1 {
+  padding: 30px;
+  background-color: #263238ea;
+  margin: 2% auto;
+  width: 50%;
+  border-block-start-style: ridge;
+  border-block-end-style: ridge;
+  border-radius: 15px;
   text-align: center;
+}
+.viedo__h1 {
+  color: #fff9ff;
   padding: 15px;
   margin: 20px;
-}
-
-/* Página de la galeria  */
-/* Position the image container  */
-* {
-  box-sizing: border-box;
-}
-
-/* Position the image container */
-.container1 {
-  position: relative;
-}
-
-/* Hide the images by default */
-.mySlides {
-  display: none;
-}
-
-/* Add a pointer when hovering over the thumbnail images */
-.cursor {
-  cursor: pointer;
-}
-
-/* Next & previous buttons */
-.prev,
-.next {
-  cursor: pointer;
-  position: absolute;
-  top: 40%;
-  width: auto;
-  padding: 16px;
-  margin-top: -50px;
-  color: white;
-  font-weight: bold;
-  font-size: 20px;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-  -webkit-user-select: none;
-}
-
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover,
-.next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
-}
-
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
-
-/* Container for image text */
-.caption-container {
+  text-shadow: 4px 2px 8px black;
   text-align: center;
-  background-color: #222;
-  padding: 2px 16px;
-  color: white;
-}
-
-.row1:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Six columns side by side */
-.column1 {
-  float: left;
-  width: 16.66%;
-}
-
-/* Add a transparency effect for thumnbail images */
-.demo {
-  opacity: 0.6;
-}
-
-.active,
-.demo:hover {
-  opacity: 1;
 }
 
 /*footer*/
